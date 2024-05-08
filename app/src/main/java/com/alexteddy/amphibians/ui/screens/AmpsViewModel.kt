@@ -17,8 +17,8 @@ import java.io.IOException
 
 sealed interface AmpsUiState {
     data class Success(val amps: List<Amphibian>) : AmpsUiState
-    object Error : AmpsUiState
-    object Loading : AmpsUiState
+    data object Error : AmpsUiState
+    data object Loading : AmpsUiState
 }
 
 class AmpsViewModel(private val ampsRepository: AmpsRepository) : ViewModel() {

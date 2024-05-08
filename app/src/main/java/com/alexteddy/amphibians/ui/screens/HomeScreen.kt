@@ -50,18 +50,18 @@ fun HomeScreen(
         // "Success: ${mpsUiState.amps.size} Amphibian photos retrieved"
         // hien grid chieu doc nhieu buc anh
         // PhotosGridScreen(marsUiState.photos, modifier)
-        AmphibiansListScreen(
-            ampsUiState.amps,
-            modifier = modifier
-                .padding(
-                    start = dimensionResource(R.dimen.padding_medium),
-                    top = dimensionResource(R.dimen.padding_medium),
-                    end = dimensionResource(R.dimen.padding_medium)
-                ),
-            contentPadding
-        )
+//        AmphibiansListScreen(
+//            ampsUiState.amps,
+//            modifier = modifier
+//                .padding(
+//                    start = dimensionResource(R.dimen.padding_medium),
+//                    top = dimensionResource(R.dimen.padding_medium),
+//                    end = dimensionResource(R.dimen.padding_medium)
+//                ),
+//            contentPadding
+//        )
         // hien 1 buc anh
-        //AmpsPhotoCard(amphibian = ampsUiState.amps[0], modifier = modifier.fillMaxSize())
+        AmpsPhotoCard(amphibian = ampsUiState.amps[0], modifier = modifier.fillMaxSize())
         is AmpsUiState.Error -> ErrorScreen(retryAction, modifier = modifier.fillMaxSize())
     }
 }
